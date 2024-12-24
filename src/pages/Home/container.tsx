@@ -4,6 +4,7 @@ import Select from "../../components/Select";
 import Card from "../../components/Card";
 import LoadingComponent from "../../components/Loader";
 import { HomeContainerType } from "./type";
+import VirtualizationGrid from "../../components/VirtualizationGrid";
 
 const HomeContainer: React.FC<HomeContainerType> = ({
   types,
@@ -47,14 +48,7 @@ const HomeContainer: React.FC<HomeContainerType> = ({
         <p className="text-red-600">{error}</p>
       ) : (
         // Pokémon List
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {filteredPokemons.map((pokemon) => (
-            <Card
-              key={pokemon.name}
-              pokemon={{ ...pokemon, image: pokemon.image || "" }}
-            />
-          ))}
-        </div>
+        <VirtualizationGrid filteredPokemons={filteredPokemons} />
       )}
       {!filteredPokemons.length && (
         <span className="text-red-400">
