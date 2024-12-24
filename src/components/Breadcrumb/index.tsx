@@ -7,7 +7,7 @@ const Breadcrumb: React.FC = () => {
 
   return (
     <nav className="text-gray-600 text-sm p-5 pl-10 bg-gray-100 mt-3">
-      <Link to="/" className="hover:underline text-blue-500">
+      <Link to="/" className="hover:underline text-gray-800">
         Home
       </Link>
       {pathnames.map((value, index) => {
@@ -22,7 +22,7 @@ const Breadcrumb: React.FC = () => {
           <Link
             key={to}
             to={to}
-            className="ml-2 hover:underline text-blue-500 capitalize"
+            className="ml-2 hover:underline text-gray-800 capitalize"
           >
             &gt; {value}
           </Link>

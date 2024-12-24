@@ -52,7 +52,7 @@ describe("Card Component", () => {
     // Assert the link has the correct CSS classes
     const linkElement = screen.getByRole("link");
     expect(linkElement).toHaveClass(
-      "group border border-gray-200 rounded-lg shadow-md hover:shadow-xl hover:border-blue-500 transition-transform duration-300 transform hover:scale-105 bg-white"
+      "group border border-gray-200 rounded-lg shadow-md hover:shadow-xl hover:border-gray-500 transition-transform duration-300 transform hover:scale-105 bg-white"
     );
   });
 

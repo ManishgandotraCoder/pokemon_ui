@@ -21,7 +21,7 @@ describe("Breadcrumb Component", () => {
     const homeLink = screen.getByText(/home/i);
     expect(homeLink).toBeInTheDocument();
     expect(homeLink).toHaveAttribute("href", "/");
-    expect(homeLink).toHaveClass("hover:underline text-blue-500");
+    expect(homeLink).toHaveClass("hover:underline text-gray-800");
   });
 
   it("renders breadcrumb for a single path correctly", () => {
@@ -35,7 +35,7 @@ describe("Breadcrumb Component", () => {
     // Current page
     const aboutText = screen.getByText(/about/i);
     expect(aboutText).toBeInTheDocument();
-    expect(aboutText).not.toHaveClass("hover:underline text-blue-500");
+    expect(aboutText).not.toHaveClass("hover:underline text-gray-800");
   });
 
   it("renders breadcrumb for nested paths correctly", () => {
@@ -50,12 +50,12 @@ describe("Breadcrumb Component", () => {
     const productsLink = screen.getByText(/products/i);
     expect(productsLink).toBeInTheDocument();
     expect(productsLink).toHaveAttribute("href", "/products");
-    expect(productsLink).toHaveClass("hover:underline text-blue-500");
+    expect(productsLink).toHaveClass("hover:underline text-gray-800");
 
     // Current page (electronics)
     const electronicsText = screen.getByText(/electronics/i);
     expect(electronicsText).toBeInTheDocument();
-    expect(electronicsText).not.toHaveClass("hover:underline text-blue-500");
+    expect(electronicsText).not.toHaveClass("hover:underline text-gray-800");
   });
 
   it("handles root path correctly", () => {

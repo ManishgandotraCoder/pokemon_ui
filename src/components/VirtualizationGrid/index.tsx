@@ -86,6 +86,7 @@ const VirtualizationGrid: React.FC<VirtualizationGridProps> = ({
   return (
     <div
       ref={containerRef}
+      data-testid="virtualization-container"
       style={{ height: `${containerHeight}px`, overflowY: "auto" }}
       className="relative border border-gray-300 bg-white rounded-md shadow-md"
     >

@@ -5,7 +5,7 @@ import { CardType } from "./type";
 const Card: React.FC<CardType> = ({ pokemon }) => (
   <Link
     to={`/pokemon/${pokemon.name}`}
-    className="group border border-gray-200 rounded-lg shadow-md hover:shadow-xl hover:border-blue-500 transition-transform duration-300 transform hover:scale-105 bg-white"
+    className="group border border-gray-200 rounded-lg shadow-md hover:shadow-xl hover:border-gray-500 transition-transform duration-300 transform hover:scale-105 bg-white"
   >
     {/* Pokémon Image */}
     <div className="flex justify-center p-5 bg-gray-50 rounded-lg">

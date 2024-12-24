@@ -19,7 +19,7 @@ describe("Header Component", () => {
     // Check the header element for correct classes
     const headerElement = screen.getByRole("banner");
     expect(headerElement).toHaveClass(
-      "bg-blue-200 sticky top-0 z-50 shadow-md"
+      "bg-gray-800 sticky top-0 z-50 shadow-md text-white"
     );
   });
 
