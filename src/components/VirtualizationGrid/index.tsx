@@ -21,7 +21,7 @@ const VirtualizationGrid: React.FC<VirtualizationGridProps> = ({
   const [itemsPerRow, setItemsPerRow] = useState(2); // Default layout: 2 items per row on mobile
 
   const itemHeight = 250; // Height of a single card
-  const containerHeight = 600; // Height of the visible container
+  const containerHeight = 700; // Height of the visible container
 
   // Recalculate the number of items per row on resize
   const handleResize = useCallback(() => {
