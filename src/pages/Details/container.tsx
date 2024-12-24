@@ -44,7 +44,7 @@ const DetailsContainer: React.FC<DetailsContainerProps> = ({
           <h1 className="text-3xl font-bold text-gray-800 capitalize mb-4">
             {name}
           </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-6">
             {renderList(
               "Types",
               types.map((type) => type.type.name)
