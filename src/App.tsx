@@ -7,19 +7,21 @@ import Home from "./pages/Home";
 import Details from "./pages/Details";
 import Header from "./components/Header";
 import Breadcrumb from "./components/Breadcrumb";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <BrowserRouter basename="/">
+      <Header />
+      <Breadcrumb />
       <Provider store={store}>
-        <Header />
-        <Breadcrumb />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pokemon" element={<Home />} />
           <Route path="/pokemon/:name" element={<Details />} />
         </Routes>
       </Provider>
+      <Footer />
     </BrowserRouter>
   );
 }
