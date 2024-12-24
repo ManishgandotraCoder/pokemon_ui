@@ -6,7 +6,6 @@ import {
 } from "./pokemonThunks";
 import { PokemonState } from "./pokemonType";
 import { PokemonType } from "../../pages/Home/type";
-import { PokemonDetailsType } from "../../pages/Details/type";
 
 // Initial State
 const initialState: PokemonState = {

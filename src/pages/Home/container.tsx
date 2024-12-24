@@ -56,6 +56,11 @@ const HomeContainer: React.FC<HomeContainerType> = ({
           ))}
         </div>
       )}
+      {!filteredPokemons.length && (
+        <span className="text-red-400">
+          Oops! No records found. Please try a different search.{" "}
+        </span>
+      )}
     </div>
   );
 };
