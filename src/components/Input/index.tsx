@@ -3,7 +3,7 @@ import { InputType } from "./type";
 
 const Input: React.FC<InputType> = ({
   label,
-  type,
+  type = "text", // Default type is text
   value,
   onChange,
   placeholder,
@@ -16,7 +16,7 @@ const Input: React.FC<InputType> = ({
       )}
       <input
         type={type}
-        className="border border-gray-300 rounded p-2"
+        className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}

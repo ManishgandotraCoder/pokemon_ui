@@ -16,10 +16,11 @@ const Select: React.FC<selectType> = ({
       )}
 
       <select
-        className="border border-gray-300 rounded p-2"
+        className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
         value={value}
         onChange={(e) => onChange(e.target.value)}
       >
+        {/* Placeholder */}
         {placeholder && (
           <option value="" disabled>
             {placeholder}
@@ -28,7 +29,7 @@ const Select: React.FC<selectType> = ({
 
         {/* Options */}
         {options.map((option) => (
-          <option key={option.url} value={option.name}>
+          <option key={option.name} value={option.name}>
             {option.name}
           </option>
         ))}

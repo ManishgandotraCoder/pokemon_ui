@@ -27,7 +27,9 @@ describe("Input Component", () => {
     const inputElement = screen.getByPlaceholderText(/Enter search term/i);
     expect(inputElement).toBeInTheDocument();
     expect(inputElement).toHaveAttribute("type", "text");
-    expect(inputElement).toHaveClass("border border-gray-300 rounded p-2");
+    expect(inputElement).toHaveClass(
+      "border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    );
   });
 
   it("calls onChange when the input value changes", () => {

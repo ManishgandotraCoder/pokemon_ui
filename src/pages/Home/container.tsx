@@ -18,9 +18,8 @@ const HomeContainer: React.FC<HomeContainerType> = ({
   return (
     <div className="px-4 md:px-8 lg:px-16">
       {/* Filters */}
-      <div className="flex flex-wrap space-x-4 mb-4 items-end m-5">
-        {/* Select Dropdown */}
-        <div className="w-full sm:w-1/2 md:w-1/4">
+      <div className="flex flex-wrap gap-4 mb-4 items-end">
+        <div className="w-full sm:w-1/2 md:w-1/3">
           <Select
             label="Select Pokémon Type"
             options={types}
@@ -30,8 +29,7 @@ const HomeContainer: React.FC<HomeContainerType> = ({
           />
         </div>
 
-        {/* Search Input */}
-        <div className="w-full sm:w-1/2 md:w-1/4">
+        <div className="w-full sm:w-1/2 md:w-1/3">
           <Input
             label="Search Pokémon"
             type="text"
@@ -49,7 +47,7 @@ const HomeContainer: React.FC<HomeContainerType> = ({
         <p className="text-red-600">{error}</p>
       ) : (
         // Pokémon List
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {filteredPokemons.map((pokemon) => (
             <Card
               key={pokemon.name}
